@@ -143,8 +143,8 @@
         let isotope = new Isotope('.items', {
           "itemSelector": ".item",
           "layoutMode": "fitRows",
-          "transitionDuration": "0.2s",
-          "stagger": 40,
+          "transitionDuration": "100ms",
+          // "stagger": 40,
         });
 
         function doFilter(query) {
@@ -161,5 +161,17 @@
         })();
       }
     </script>
+    <style>
+      @media screen and (max-width:768px) {
+        .item {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width:769px) {
+        .item > a:hover {
+          filter: brightness(90%);
+        }        
+      }
+    </style>
   </body>
 </html>
