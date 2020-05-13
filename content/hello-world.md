@@ -1,5 +1,5 @@
 ---
-title: "Hello, world!"
+title: "Hello, World!"
 layout: "bundle"
 outputs: ["Reveal"]
 date: 2020-05-13T13:27:03+10:00

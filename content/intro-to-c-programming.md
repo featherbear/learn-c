@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Programming"
+title: "Intro to Programming"
 layout: "bundle"
 outputs: ["Reveal"]
 date: 2020-05-13T13:09:50+10:00
