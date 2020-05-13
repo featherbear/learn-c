@@ -3,7 +3,6 @@ title: "Hello, world!"
 layout: "bundle"
 outputs: ["Reveal"]
 date: 2020-05-13T13:27:03+10:00
-draft: true
 ---
 
 {{< slide class="center" >}}
