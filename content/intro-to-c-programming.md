@@ -4,10 +4,8 @@ layout: "bundle"
 outputs: ["Reveal"]
 date: 2020-05-13T13:09:50+10:00
 
-
 reveal_hugo:
     center: true
-
 ---
 
 
@@ -63,6 +61,11 @@ int main(void) {
 And lots more!
 
 ---
+
+## C Code Files
+
+Source code files for programs written in C usually have a `.c` file extension.  
+Ultimately, all source code files are just text documents that can be edited with any text editor.
 
 ## Next Steps
 
