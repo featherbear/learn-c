@@ -2,7 +2,7 @@
 title: "Data Sizes and Numbers"
 layout: "bundle"
 outputs: ["Reveal"]
-date: 2020-05-14T20:18:04+10:00
+date: 2020-05-14T20:20:40+10:00
 ---
 
 ## Data Sizes

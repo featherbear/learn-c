@@ -2,7 +2,7 @@
 title: "Programming Environment"
 layout: "bundle"
 outputs: ["Reveal"]
-date: 2020-05-13T13:44:55+10:00
+date: 2020-05-13T13:27:03+10:00
 ---
 
 {{< slide class="center" >}}
@@ -84,3 +84,4 @@ We can then run our program
   * Already included in Linux and Mac
 * Practise compiling and executing programs
 
+> [Hello World](../hello-world)

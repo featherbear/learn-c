@@ -2,7 +2,7 @@
 title: "Hello, World!"
 layout: "bundle"
 outputs: ["Reveal"]
-date: 2020-05-13T13:27:03+10:00
+date: 2020-05-13T13:44:55+10:00
 ---
 
 {{< slide class="center" >}}
@@ -80,8 +80,6 @@ int main(void) {
 |Semicolons|`;`|
 
 ---
-
-# Hello, &lt;YOU&gt;
 
 > **EXERCISE**  
 Write a C program to print out "Hello", followed by your name.
