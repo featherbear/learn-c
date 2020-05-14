@@ -212,7 +212,7 @@ Hello, Andrew!
 
 ## Next Steps
 
-You've written your first file!  
+You've written your first program!  
 But this program can't do that much...
 
 > [Variables](../variables)

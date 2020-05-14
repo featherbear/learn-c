@@ -69,4 +69,4 @@ Ultimately, all source code files are just text documents that can be edited wit
 
 ## Next Steps
 
-> [Hello World](../hello-world)
+> [The Programming Environment](../programming-environment)
