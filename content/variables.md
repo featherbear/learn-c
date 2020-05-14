@@ -87,3 +87,72 @@ The C language allows us to declare and assign a variable in one line!
 
 > `int mynumber = 30;`
 
+---
+
+## Variable Naming
+
+You can name your variable anything you want,  
+as long as it follows the rules
+
+* Only has the characters `A`-`Z`, `A-Z`, `0-9` and `_`
+* Does not _start_ with a number
+* Is not a keyword (Reserved names)
+
+{{% section %}}
+
+&nbsp;  
+
+|my_var|2my_var|_3my_var|myv4r|my var5|
+|:---:|:----:|:----:|:----:|:----:|
+|<span style="color: lightgreen;font-size: 1.5em;">&#x2714;&#xFE0F;</span>|&#x274C;|<span style="color: lightgreen;font-size: 1.5em;">&#x2714;&#xFE0F;</span>|<span style="color: lightgreen;font-size: 1.5em;">&#x2714;&#xFE0F;</span>|&#x274C;|
+
+---
+
+Note: Variables are case-sensitive.
+
+`my_var` is different to `My_var`
+
+{{% /section %}}
+
+---
+
+> `int | float | char | bool`
+
+{{% section %}}
+How would you define a variable for the age of someone who is `15`?  
+
+{{% fragment %}}<br/>`int age = 15;`{{% /fragment %}}
+
+---
+
+How would you define a variable to contain the temperature `19.35`°C?  
+
+{{% fragment %}}<br/>`float temperature = 19.35;`{{% /fragment %}}
+
+---
+
+How would you define a variable to be `false`?  
+
+{{% fragment %}}<br/>`bool result = false;`{{% /fragment %}}
+
+---
+
+How would you define a variable for the letter `H`?  
+
+{{% fragment %}}<br/>`char letter = 'H';`<br/><br/>Note: You need to wrap the letter with apostrophes{{% /fragment %}}
+
+---
+
+How would you define a variable for the word `Hello`?  
+
+{{% fragment %}}<br/><s>`char word = 'Hello';`</s><br/><s>`char word = "Hello";`</s><br/><s>`string word = "Hello";`</s><br/><br/>`char word[] = "Hello";`</s>{{% /fragment %}}
+
+{{% /section  %}}
+
+---
+
+{{< slide class="center" >}}
+
+## Next Steps
+
+> [Strings](../strings)
