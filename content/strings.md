@@ -40,6 +40,19 @@ _In C, we define a string as an <u>array of characters</u>._
 
 ---
 
+## Printing Strings
+
+To print a string, we can use the `printf` function.  
+
+```c
+char str[] = "Hello!";
+printf("%s", str);
+```
+
+{{% fragment %}}The `"%s"` tells the function to display `str` as a string{{% /fragment %}}
+
+---
+
 ## The Null Character '\0'
 
 Every byte of data is stored in a different memory address. They however are kept in the same region.
@@ -89,6 +102,19 @@ If we decide to define our string with characters, we need to make sure to put t
 
 ---
 
+## The Null Character '\0'
+
+> `char w[] = "Hello\0World!";`
+
+A string is identified from the first character to the first NULL character.  
+
+If we wrote `printf("%s", w);` -  we would see "Hello", and would not see the word "World"
+
+{{% fragment %}}> `char w[] = {'H','i','\0'}`
+
+If we decide to define our string with characters, we need to make sure to put the NULL character in!{{% /fragment %}}
+
+---
 
 ## Review
 

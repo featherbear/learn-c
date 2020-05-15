@@ -89,6 +89,20 @@ The C language allows us to declare and assign a variable in one line!
 
 ---
 
+## Reassigning Variables
+
+We can easily change the value of a variable by assigning it a new value!  
+
+```
+int number = 10; // number is 10
+number = 5;      // number is now 5
+number = 13;     // number is now 13
+```
+
+> NOTE: We only define the _type_ of a variable **ONCE**
+
+---
+
 ## Variable Naming
 
 You can name your variable anything you want,  
@@ -141,13 +155,41 @@ How would you define a variable for the letter `H`?
 
 {{% fragment %}}<br/>`char letter = 'H';`<br/><br/>Note: You need to wrap the letter with apostrophes{{% /fragment %}}
 
+{{% /section %}}
+
+---
+
+## Displaying Variables
+
+We can use `printf` to show variables!
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int num;
+    num = 12;
+    char c = 'm';
+    printf("num is %d, and c is %c\n", num, c);
+    
+    num = 10;
+    printf("num is now %d", num);
+
+   return 0;
+}
+```
+
+```bash
+$> ./program
+num is 12, and c is m
+num is now 10
+```
+
 ---
 
 How would you define a variable for the word `Hello`?  
 
 {{% fragment %}}<br/><s>`char word = 'Hello';`</s><br/><s>`char word = "Hello";`</s><br/><s>`string word = "Hello";`</s><br/><br/>`char word[] = "Hello";`</s>{{% /fragment %}}
-
-{{% /section  %}}
 
 ---
 
