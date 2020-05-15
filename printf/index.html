@@ -1,0 +1,38 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><title>printf</title><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=../reveal-js/css/reset.css><link rel=stylesheet href=../reveal-js/css/reveal.css><link rel=stylesheet href=../reveal-js/css/theme/black.css id=theme><link rel=stylesheet href=../highlight-js/default.min.css></head><body><div class=reveal><div class=slides><section data-noprocess data-shortcode-slide class=center><h2 id=the-printf-function>The <code>printf</code> Function</h2></section><section><h2 id=the-printf-function-1>The <code>printf</code> Function</h2><p>It is very useful for programs to display an output!<br>We can use the <code>printf</code> function to do this!</p></section><section><h2 id=the-printf-function-2>The <code>printf</code> Function</h2><blockquote><p><code>printf(FMT,arg1,arg2,...);</code></p></blockquote><section data-shortcode-section><ul><li><code>FMT</code> - Format string<ul><li>Tells the function what to do with its arguments</li></ul></li><li>arg[n] - Displayed, depending on the format string</li></ul></section><section><p>The format string (FMT) instructs the function on how to display the information.</p><p>For example, <code>printf(&quot;Hello&quot;)</code> will display Hello.</p></section><section><p>To show numbers, we can use the <code>%d</code> format specifier.</p><p><code>printf(&quot;A day has %d hours&quot;, 24);</code></p><pre><code class=language-c>$&gt; ./program
+A day has 24 hours
+</code></pre></section><section><p>To show single letters, we can use the <code>%c</code> format specifier.</p><p><code>printf(&quot;Dog starts with a %c&quot;, 'd');</code></p><pre><code class=language-c>$&gt; ./program
+Dog starts with a d
+</code></pre></section><section><p>To print out a <code>'%'</code>, we put <code>%%</code> in the format specifier.</p><p><code>printf(&quot;The percentage sign is %%.&quot;);</code></p><pre><code class=language-c>$&gt; ./program
+The percentage sign is %.
+</code></pre></section><section><p>There are many other format specifiers!</p><table><thead><tr><th align=center></th><th align=left></th></tr></thead><tbody><tr><td align=center><code>%f</code></td><td align=left>Floating Point Number</td></tr><tr><td align=center><code>%s</code></td><td align=left>String</td></tr><tr><td align=center><code>%x</code></td><td align=left>Hexadecimal Number</td></tr><tr><td align=center><code>%p</code></td><td align=left>Point</td></tr><tr><td align=center></td><td align=left>etc&hellip;</td></tr></tbody></table></section></section><section><h2 id=the-new-line-character-n>The New Line Character <code>\n</code></h2><section data-shortcode-section><p>If we run the following program.</p><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void){
+    printf(&quot;Hello&quot;);
+    printf(&quot;How are you?&quot;);
+    return 0;
+}
+</code></pre><p>We will see this</p><pre><code class=language-c>HelloHow are you?
+</code></pre><p>&nbsp;<br>This is because printf does not start on a new line!</p></section><p><section data-noprocess data-shortcode-slide data-transition=fade></p><p>To show each sentence separately, we need to put a new line character - represented by <code>\n</code>.</p><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void){
+    printf(&quot;Hello\n&quot;);
+    printf(&quot;How are you?\n&quot;);
+    return 0;
+}
+</code></pre><p>We will now see</p><pre><code class=language-c>Hello
+How are you?
+</code></pre></section></section><section><h2 id=try-it>Try It</h2><p>Write a program to print &ldquo;My name is &hellip;&rdquo;, followed by your name. Use an appropriate format specifier.</p><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void) {
+
+    // WRITE YOUR CODE HERE
+
+    return 0;
+}
+</code></pre></section><section><h2 id=try-it-1>Try It</h2><p>Write a program to print out a bird</p><pre><code>  __
+&lt;(o )___
+ ( ._&gt; /
+  `---'
+</code></pre></section></div></div><script type=text/javascript src=../reveal-hugo/object-assign.js></script><a href=../reveal-js/css/print/ id=print-location style=display:none></a><script type=text/javascript>var printLocationElement=document.getElementById('print-location');var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css');document.getElementsByTagName('head')[0].appendChild(link);</script><script type=application/json id=reveal-hugo-site-params>{"center":false,"history":true,"pdf_separate_fragments":false,"slide_number":true}</script><script type=application/json id=reveal-hugo-page-params>null</script><script src=../reveal-js/js/reveal.js></script><script type=text/javascript>function camelize(map){if(map){Object.keys(map).forEach(function(k){newK=k.replace(/(\_\w)/g,function(m){return m[1].toUpperCase()});if(newK!=k){map[newK]=map[k];delete map[k];}});}
+return map;}
+var revealHugoDefaults={center:true,controls:true,history:true,progress:true,transition:"slide"};var revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);var revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);var options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams));Reveal.initialize(options);</script><script type=text/javascript src=../reveal-js/plugin/markdown/marked.js></script><script type=text/javascript src=../reveal-js/plugin/markdown/markdown.js></script><script type=text/javascript src=../reveal-js/plugin/highlight/highlight.js></script><script type=text/javascript src=../reveal-js/plugin/zoom-js/zoom.js></script><script type=text/javascript src=../reveal-js/plugin/notes/notes.js></script><script type=text/javascript>document.title+=" | Introduction to C Programming";window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}};</script><script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js></script><script>if(window.location.search.match(/print-pdf/gi)){var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href='reveal.js/css/print/pdf.css';document.getElementsByTagName('head')[0].appendChild(link);}</script></body></html>
