@@ -43,6 +43,40 @@ int main(void) {
 
 ---
 
+Write a program to display the word "Butterfly", and programmatically print the second letter of the word.
+
+{{% section %}}
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    
+    // WRITE YOUR CODE HERE
+
+    return 0;
+}
+```
+
+---
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    char word[] = "Butterfly";
+
+    printf("The word is %s\n", word);
+    printf("The second letter is %c", word[1]);
+
+    return 0;
+}
+```
+
+{{% /section %}}
+
+---
+
 Write a program to print out the number 1 and the first letter of the alphabet. Then print out the number 2, and the second letter of the alphabet.
 
 {{% fragment %}}<br/>Now also print out the number 3, and the third letter{{% /fragment %}}
