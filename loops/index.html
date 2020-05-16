@@ -1,0 +1,73 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Loops</title><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=../reveal-js/css/reset.css><link rel=stylesheet href=../reveal-js/css/reveal.css><link rel=stylesheet href=../reveal-js/css/theme/black.css id=theme><link rel=stylesheet href=../highlight-js/default.min.css></head><body><div class=reveal><div class=slides><section data-noprocess data-shortcode-slide class=center><h2 id=loops>Loops</h2></section><section><h2 id=loops-1>Loops</h2><p>Loops allow us to repeat parts of code several times.</p><p>They are very powerful when used with variables, as they can do different things depending on the variable.</p></section><section><h2 id=the-while-loop>The While Loop</h2><blockquote><p><code>while (COND) { ... }</code></p></blockquote><p>The <code>while</code> loop will repeat its code block for as long as given condition is true.</p><section data-shortcode-section><p><span class=fragment><pre><code class=language-c>int number = 3;
+while (number &gt; 0) {
+    printf(&quot;%d\n&quot;, number);
+    number = number - 1;
+}
+printf(&quot;Blast Off!&quot;);
+</code></pre></p><pre><code>3
+2
+1
+Blast Off!
+</code></pre><p></span></p></section><section><p>Every time the loop begins, the <code>COND</code> is evaluated.</p><p>If it is true - the loop will run.<br>Otherwise the program will go to the next code block.</p></section><section><pre><code>int limit = 5;
+int number = 6;
+
+printf(&quot;Starting at %d\n&quot;, number);
+
+while (number &lt; limit) {                // this
+    printf(&quot;Counted to %d\n&quot;, number);  // code
+    number = number + 1;                // won't
+}                                       // run
+
+printf(&quot;Finished at %d\n&quot;, number);
+</code></pre></section></section><section><h2 id=the-for-loop>The For Loop</h2><blockquote><p><code>for (INIT;COND;STEP) {...}</code></p></blockquote><section data-shortcode-section><p>When using the <code>while</code> loop, we had to separately define a variable, a condition and step instruction.</p><pre><code class=language-c>int number = 3;             // INIT variable
+while (number &gt; 0) {        // COND check
+    printf(&quot;%d\n&quot;, number);
+    number = number - 1;    // STEP instruction
+}
+printf(&quot;Blast Off!&quot;);
+</code></pre></section><section><p>With a <code>for</code> loop, we can combine everything together!</p><pre><code class=language-c>for (int number = 3; number &gt; 0; number = number - 1) {
+//   ^ INIT          ^ COND      ^ STEP
+    printf(&quot;%d\n&quot;, number);
+}
+printf(&quot;Blast Off!&quot;);
+</code></pre><pre><code>3
+2
+1
+Blast Off!
+</code></pre></section></section><section><p>Write a program to print out the numbers 1-26, and their corresponding letters in the alphabet.</p><section data-shortcode-section><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void) {
+    
+    // WRITE YOUR CODE HERE
+
+    return 0;
+}
+</code></pre></section><section><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i = 1;
+    char c = 'A';
+
+    while (i &lt;= 26) {              // i = 1..26
+        printf(&quot;%d - %c\n&quot;, i, c); // e.g &quot;1 - A&quot;
+        i++;                       // Shorthand for i = i + 1
+        c++;                       // Shorthand for c = c + 1
+    }
+
+    return 0;
+}
+</code></pre></section></section><section><p>When using <code>for</code> loops, we can also initialise multiple values, and perform several step instructions.</p><p>Note: All the variables must be the same data type!</p><pre><code class=language-c>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int a = 1, b = 2; a &lt; 5; a++, b += 2) {
+        //                             ^ short for b = b + 2
+        printf(&quot;%d&quot;, b);
+    }
+
+    return 0;
+}
+</code></pre><p><span class=fragment>How many times does this loop run?</span>
+<span class=fragment>A: Four times</span></p><p><span class=fragment>What does the program output?</span>
+<span class=fragment>2 4 6 8</span></p></section></div></div><script type=text/javascript src=../reveal-hugo/object-assign.js></script><a href=../reveal-js/css/print/ id=print-location style=display:none></a><script type=text/javascript>var printLocationElement=document.getElementById('print-location');var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href=printLocationElement.href+(window.location.search.match(/print-pdf/gi)?'pdf.css':'paper.css');document.getElementsByTagName('head')[0].appendChild(link);</script><script type=application/json id=reveal-hugo-site-params>{"center":false,"history":true,"pdf_separate_fragments":false,"slide_number":true}</script><script type=application/json id=reveal-hugo-page-params>null</script><script src=../reveal-js/js/reveal.js></script><script type=text/javascript>function camelize(map){if(map){Object.keys(map).forEach(function(k){newK=k.replace(/(\_\w)/g,function(m){return m[1].toUpperCase()});if(newK!=k){map[newK]=map[k];delete map[k];}});}
+return map;}
+var revealHugoDefaults={center:true,controls:true,history:true,progress:true,transition:"slide"};var revealHugoSiteParams=JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);var revealHugoPageParams=JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);var options=Object.assign({},camelize(revealHugoDefaults),camelize(revealHugoSiteParams),camelize(revealHugoPageParams));Reveal.initialize(options);</script><script type=text/javascript src=../reveal-js/plugin/markdown/marked.js></script><script type=text/javascript src=../reveal-js/plugin/markdown/markdown.js></script><script type=text/javascript src=../reveal-js/plugin/highlight/highlight.js></script><script type=text/javascript src=../reveal-js/plugin/zoom-js/zoom.js></script><script type=text/javascript src=../reveal-js/plugin/notes/notes.js></script><script type=text/javascript>document.title+=" | Introduction to C Programming";window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'global'}};</script><script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js></script><script>if(window.location.search.match(/print-pdf/gi)){var link=document.createElement('link');link.rel='stylesheet';link.type='text/css';link.href='reveal.js/css/print/pdf.css';document.getElementsByTagName('head')[0].appendChild(link);}</script></body></html>
