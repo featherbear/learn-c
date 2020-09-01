@@ -37,7 +37,7 @@
         {{ range sort .Site.RegularPages.ByDate }}
         <div data-title="{{.Title}}" class="item column is-one-quarter">
           <a href="{{ .Permalink }}">
-            <p class="notification is-info">
+            <p class="notification is-info" {{ if (isset .Params "tilecolour" ) }} style="background-color: {{ print .Params.tilecolour | safeCSS }}" {{ end }}>
               {{.Title}}
               <!-- TODO: Other meta (date, tags, category) -->
             </p>
@@ -143,10 +143,11 @@
         let isotope = new Isotope('.items', {
           "itemSelector": ".item",
           "layoutMode": "fitRows",
-          "transitionDuration": "100ms",
-          // "stagger": 40,
+          "transitionDuration": "0.2s",
+          "stagger": 40,
         });
-
+        window.addEventListener('load', ()=> isotope.arrange());
+        
         function doFilter(query) {
           let regex = new RegExp(query, 'i');
           isotope.arrange({filter: (elem) => regex.test(elem.getAttribute('data-title')) })
@@ -172,6 +173,7 @@
           filter: brightness(90%);
         }        
       }
+
     </style>
   </body>
 </html>
